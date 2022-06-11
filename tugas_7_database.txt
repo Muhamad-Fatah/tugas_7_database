@@ -1,0 +1,38 @@
+1.Jalankan MySQL server di xampp
+2.Masuk kedalam folder bin mysql : cd c:/xampp/mysql/bin
+3.Jalankan client server : MYSQL -u root
+
+4.Create database tugas;
+5.use tugas;
+
+6. CREATE TABLE indonesia (
+    -> nama_kota VARCHAR(15),
+    -> kecamatan INT,
+    -> kelurahan INT,
+    -> luas_wilayah INT,
+    -> jumlah_penduduk INT);
+7. INSERT INTO indonesia VALUES ("Jakarta",44,267,664,9988495),("Surabaya",31,154,350,2805906);
+   INSERT INTO indonesia VALUES ("Medan",21,151,265,2465469),("Bekasi",12,56,206,2381053),("Bandung",30,151,167,2339463);
+   INSERT INTO indonesia VALUES ("Makassar",14,143,199,1651146);
+   INSERT INTO indonesia VALUES ("Depok",11,63,200,1631951);
+   INSERT INTO indonesia VALUES ("Semarang",16,177,373,1621384);
+   INSERT INTO indonesia SET
+    -> nama_kota = "Tangerang" ,
+    -> kecamatan = 13 ,
+    -> kelurahan = 104 ,
+    -> luas_wilayah = 153 ,
+    -> jumlah_penduduk = 1566190;
+   INSERT INTO indonesia SET
+    -> nama_kota = "Palembang" ,
+    -> kecamatan = 14,
+    -> kelurahan = 107,
+    -> luas_wilayah = 369,
+    -> jumlah_penduduk = 1548064;
+8. ALTER TABLE indonesia_2
+    -> DROP kecamatan;
+   ALTER TABLE indonesia_2
+    -> DROP kelurahan; 
+   ALTER TABLE indonesia_2
+    -> DROP luas_wilayah;
+9. INSERT INTO indonesia_2 (nama_kota,jumlah_penduduk) 
+    -> SELECT nama_kota,jumlah_penduduk FROM indonesia;
